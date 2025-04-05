@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIT Bhubaneswar Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom right, #091e3a, #1c4a7e);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo-img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo-text {
+      color: white;
+    }
+    .login-wrapper {
+      position: relative;
+      display: inline-block;
+      padding-bottom:0px; /* Added padding for hover buffer */
+    }
+    .login-button {
+      width: 100px;
+      height: 40px;
+      border-radius: 20px;
+      background: white;
+      color: #091e3a;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px); /* Adjusted positioning */
+      right: 0;
+      width: auto;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1000;
+      pointer-events: auto; /* Enable interactions */
+    }
+    .dropdown a {
+      color: #333;
+      padding: 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown a:hover {
+      background-color: #eee;
+    }
+    /* Hover bridge between button and dropdown */
+    .login-wrapper:hover::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: transparent;
+    }
+    .login-wrapper:hover .dropdown,
+    .dropdown:hover {
+      display: block;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 48px;
+      animation: textSlide 4s infinite alternate ease-in-out;
+    }
+    .section {
+      padding: 40px 60px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+      animation: slideUp 5s ease-in-out;
+    }
+    .image-gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    @keyframes textSlide {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src=https://gyaanarth.com/wp-content/uploads/2022/03/Indian_Institute_of_Technology_Bhubaneswar_Logo.svg.png alt="IIT Bhubaneswar Logo" class="logo-img">
+
+      <span class="logo-text">IIT Bhubaneswar</span>
+    </div>
+    <div class="login-wrapper" tabindex="0">
+      <button class="login-button">Login ▾</button>
+      <div class="dropdown">
+        <a href="LoginPage.html">Student Login</a>
+        <a href="faculty.html">Faculty Login</a>
+        <a href="admin.html">Admin Login</a>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <h1>Welcome to IIT Bhubaneswar</h1>
+  </section>
+  <section class="section">
+    <div class="image-gallery">
+        <img src=https://th.bing.com/th/id/OIP.-FN23nQCM1IR2Tl1rPcRtQHaDb?w=340&h=161&c=7&r=0&o=5&dpr=1.3&pid=1.7 alt="Campus 1">
+        <img src=https://th.bing.com/th/id/OIP.oZu_sTsxtQ_2fzlaqyfmFwHaE8?w=217&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7 alt="Campus 2">
+        <img src=https://th.bing.com/th/id/OIP.8kR42YoeA72ssNyoBKTRiwHaFj?w=251&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7 alt="Campus 3">
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@iitbbs.ac.in | Phone: +91-674-713-0000</p>
+  </section>
+  <footer>
+    <h2>About Us</h2>
+    <p style="font-size: 16px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+      IIT Bhubaneswar is one of India’s premier technical institutes, known for academic excellence and cutting-edge research. Our vibrant campus and world-class faculty foster innovation and growth, shaping the leaders of tomorrow.
+    </p>
+    <br>
+    &copy; 2025 IIT Bhubaneswar. All rights reserved.
+  </footer>
+ <!-- <Script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const studentLoginLink = document.querySelector('.dropdown a[href="LoginPage.html"]');
+        const facultyLoginLink = document.querySelector('.dropdown a[href="faculty.html"]');
+        const adminLoginLink = document.querySelector('.dropdown a[href="admin.html"]');
+      
+        studentLoginLink.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.location.href = "Newlog.html"; // Redirect to student login page
+          
+        })});
+  </Script>-->
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const studentLoginLink = document.querySelector('.dropdown a[href="LoginPage.html"]');
+      const facultyLoginLink = document.querySelector('.dropdown a[href="faculty.html"]');
+      const adminLoginLink = document.querySelector('.dropdown a[href="admin.html"]');
+
+      studentLoginLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        window.location.href = "Newlog.html"; // Redirect to student login page
+      });
+
+      facultyLoginLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        window.location.href = "Newlog.html"; // Redirect to faculty login page
+      });
+
+      adminLoginLink.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        window.location.href = "Newlog.html"; // Redirect to admin login page
+      });
+    });
+  </script>
+</body>
+</html>
