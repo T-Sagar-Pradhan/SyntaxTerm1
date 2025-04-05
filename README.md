@@ -13,6 +13,10 @@ For Admin Portal
 User name - admin
 pass - password12345
 
+Note
+____
+The backend work of the project is not done, so the input of the student portal is incomplete( i mean faculty and admin has to input the details of the students, so that the portal would be complete, but due to the lack of time and mismanagement we couldn't able to complete the backend work).
+
 Description
 ___________
 Student Portal Management System – Detailed Description
@@ -32,6 +36,7 @@ Attendance Information: View attendance percentages or logs.
 Submit forms or feedback: Through simple form input elements.
 
 All of this gives the student an overview of their academic life in one place.
+
 
 🔹 2. Faculty Module (Faculty.html)
 This page is designed for teachers to:
